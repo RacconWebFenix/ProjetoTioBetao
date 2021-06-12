@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Projeto Tio Betão Personalizado - Blue</title>
+  </head>
+  <body>
+    <div class="container">
+      {% if not escolha %}
+      <div class="logoBlue">
+        <img
+          src="/static/logo-blue-croped.gif"
+          width="100"
+          alt="Logo da Blue"
+          id="blue"
+        />
+      </div>
+      <div class="inicio">
+        <div id="texto">Escolha sua Runa de Batalha</div>
+        <div class="imagensConteudo">
+          <div class="molde">
+            <img src="/static/logoTheWhitcher.png" alt="Logo The Whitcher" />
+          </div>
+        </div>
+      </div>
+      <form method="POST">
+        <div class="conteudo">
+          <div class="radios">
+            <label for="aard">
+              Aard
+              <div class="runas">
+                <img src="/static/aard.png" alt="" />
+              </div>
+            </label>
+            <input type="radio" name="escolha" id="aard" value="Aard" checked />
+          </div>
+          <div class="radios">
+            <label for="axii">
+              Axii
+              <div class="runas">
+                <img src="/static/axii.png" alt="" />
+              </div>
+            </label>
+            <input type="radio" name="escolha" id="axii" value="Axii" />
+          </div>
+          <div class="radios">
+            <label for="igni">
+              Igni
+              <div class="runas">
+                <img src="/static/igni.png" alt="" />
+              </div>
+            </label>
+            <input type="radio" name="escolha" id="igni" value="Igni" />
+          </div>
+          <div class="radios">
+            <label for="quen">
+              Quen
+              <div class="runas">
+                <img src="/static/quen.png" alt="" />
+              </div>
+            </label>
+            <input type="radio" name="escolha" id="quen" value="Quen" />
+          </div>
+          <div class="radios">
+            <label for="yarden">
+              Yarden
+              <div class="runas">
+                <img src="/static/yrden.png" alt="" />
+              </div>
+            </label>
+            <input type="radio" name="escolha" id="yarden" value="Yarden" />
+          </div>
+        </div>
+        <div class="btnEnviar">
+          <button type="submit" class="btnEnviarForm">Ver Runa</button>
+        </div>
+      </form>
+      {% else %}
+      <div class="logoBlue">
+        <img
+          src="/static/logo-blue-croped.gif"
+          width="100"
+          alt="Logo da Blue"
+          id="blue"
+        />
+      </div>
+    </div>
+    <div class="container">
+      <div class="cabecalho">
+        <div class="inicio">
+          <div id="texto">{{escolha}}</div>
+          <div class="imagensConteudo">
+            <div id="espacamento">
+              <div class="molde">
+                <div class="cardRuna">
+                  <img
+                    src="{{cardRuna}}"
+                    alt="Imagem da {{escolha}}"
+                    id="cardRunaImg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="conteudoBotao">
+        <div class="botaoVoltar">
+          <a href="/"
+            ><button class="btnEnviarForm">Escolher Outra Runa</button></a
+          >
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
