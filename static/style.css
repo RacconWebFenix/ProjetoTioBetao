@@ -27,6 +27,7 @@ body {
 }
 .imagensConteudo img {
   width: 15rem;
+
 }
 
 #texto {
@@ -40,6 +41,7 @@ body {
 
 #blue {
   width: 5rem;
+
 }
 
 .conteudo {
@@ -51,18 +53,23 @@ body {
   font-size: larger;
 }
 .radios {
+  width: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 2px solid snow;
+  border-radius: 1rem;
+  padding: 0.8rem;
+
 }
 
 .btnEnviar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem;
+
 }
 
 .btnEnviarForm {
@@ -121,6 +128,10 @@ body {
   border-radius: 7rem;
 }
 
-#espacamento {
-  margin: 2.5rem;
+.btnEnviarForm{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
 }
+

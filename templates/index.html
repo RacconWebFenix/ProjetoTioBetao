@@ -9,7 +9,6 @@
   </head>
   <body>
     <div class="container">
-      {% if not escolha %}
       <div class="logoBlue">
         <img
           src="/static/logo-blue-croped.gif"
@@ -22,99 +21,37 @@
         <div id="texto">Escolha sua Runa de Batalha</div>
         <div class="imagensConteudo">
           <div class="molde">
-            <img src="/static/logoTheWhitcher.png" alt="Logo The Whitcher" />
+            <img src="/static/logoTheWhitcher.png" alt="Logo The Whitcher" id="imagemRuna" />
           </div>
         </div>
       </div>
-      <form method="POST">
-        <div class="conteudo">
+      <div class="conteudo">
+        {% for runa in runas %}
+        <label for="{{runa.nome}}">
           <div class="radios">
-            <label for="aard">
-              Aard
+              {{runa.nome}}
               <div class="runas">
-                <img src="/static/aard.png" alt="" />
+                <img src="{{runa.imagem}}" alt="" />
+                <img src="{{runa.cardArt}}" class="imagensCadrArt" width="100" alt="" hidden>
               </div>
-            </label>
-            <input type="radio" name="escolha" id="aard" value="Aard" checked />
-          </div>
-          <div class="radios">
-            <label for="axii">
-              Axii
-              <div class="runas">
-                <img src="/static/axii.png" alt="" />
-              </div>
-            </label>
-            <input type="radio" name="escolha" id="axii" value="Axii" />
-          </div>
-          <div class="radios">
-            <label for="igni">
-              Igni
-              <div class="runas">
-                <img src="/static/igni.png" alt="" />
-              </div>
-            </label>
-            <input type="radio" name="escolha" id="igni" value="Igni" />
-          </div>
-          <div class="radios">
-            <label for="quen">
-              Quen
-              <div class="runas">
-                <img src="/static/quen.png" alt="" />
-              </div>
-            </label>
-            <input type="radio" name="escolha" id="quen" value="Quen" />
-          </div>
-          <div class="radios">
-            <label for="yarden">
-              Yarden
-              <div class="runas">
-                <img src="/static/yrden.png" alt="" />
-              </div>
-            </label>
-            <input type="radio" name="escolha" id="yarden" value="Yarden" />
+              <input
+              type="radio"
+              name="escolha"
+              class="escolhaRuna"
+              id="{{runa.nome}}"
+              value="{{runa.nome}}"
+              onclick="escolhido()"
+              hidden
+              />
+            </div>
+          </label>
+            {% endfor %} 
           </div>
         </div>
         <div class="btnEnviar">
-          <button type="submit" class="btnEnviarForm">Ver Runa</button>
-        </div>
-      </form>
-      {% else %}
-      <div class="logoBlue">
-        <img
-          src="/static/logo-blue-croped.gif"
-          width="100"
-          alt="Logo da Blue"
-          id="blue"
-        />
-      </div>
-    </div>
-    <div class="container">
-      <div class="cabecalho">
-        <div class="inicio">
-          <div id="texto">{{escolha}}</div>
-          <div class="imagensConteudo">
-            <div id="espacamento">
-              <div class="molde">
-                <div class="cardRuna">
-                  <img
-                    src="{{cardRuna}}"
-                    alt="Imagem da {{escolha}}"
-                    id="cardRunaImg"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          <input type="button" value="Ver Runa" id="botao" class="btnEnviarForm">
         </div>
       </div>
-      <div id="conteudoBotao">
-        <div class="botaoVoltar">
-          <a href="/"
-            ><button class="btnEnviarForm">Escolher Outra Runa</button></a
-          >
-        </div>
-      </div>
-      {% endif %}
-    </div>
+      <script src="/static/index.js"></script>
   </body>
 </html>
