@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.logoBlue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+}
+.inicio {
+  text-align: center;
+  justify-content: center;
+}
+
+.imagensConteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+}
+.imagensConteudo img {
+  width: 15rem;
+}
+
+#texto {
+  margin: 1rem;
+  font-size: large;
+  font-weight: 800;
+  font-family: monospace;
+  color: wheat;
+  text-shadow: 0 4px 15px wheat;
+}
+
+#blue {
+  width: 5rem;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem;
+  color: wheat;
+  font-size: larger;
+}
+.radios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btnEnviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.btnEnviarForm {
+  border-top: 1px solid #96d1f8;
+  background: #fc0000;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#5e0000),
+    to(#fc0000)
+  );
+  background: -webkit-linear-gradient(top, #5e0000, #fc0000);
+  background: -moz-linear-gradient(top, #5e0000, #fc0000);
+  background: -ms-linear-gradient(top, #5e0000, #fc0000);
+  background: -o-linear-gradient(top, #5e0000, #fc0000);
+  padding: 10.5px 21px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: white;
+  font-size: 14px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.btnEnviarForm:hover {
+  border-top-color: #3d0000;
+  background: #3d0000;
+  color: #ccc;
+}
+.button:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+}
+
+.molde {
+  background-color: blanchedalmond;
+  box-shadow: 0 4px 15px blanchedalmond;
+  border-radius: 100rem;
+}
+
+#conteudoBotao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+#cardRunaImg {
+  border-radius: 7rem;
+}
+
+#espacamento {
+  margin: 2.5rem;
+}
